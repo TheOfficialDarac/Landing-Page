@@ -1,28 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:white;
 }
 
 header {
     background: rgb(31, 41, 55);
+    width: 100vw;
+}
+html{
+    width: 100vw;
 }
 
-.rotate90{
-    rotate: 90deg;
+button{
+    padding: 4px 16px;
+    background:none;
+    border-radius:7px;
 }
+button:hover {
+    color:#1f2937;
+    background:white;
+    cursor: pointer;
+}
+
+/* .rotate90{
+    transition: .15s; 
+     rotate: 90deg; 
+    transform: rotate(0.25turn);
+} */
 .navbar {
-    /* width: 100vw;; */
+    flex: 0 0 1100px;
     display: flex;
     justify-content: space-between;
     max-width: 1100px;
     margin: auto;
     font-family: 'Poppins', sans-serif;
-    padding: 0 16px;
-    /* height: 2rem; */
+    padding: 0 32px 0 16px;
     align-items: center;
+    border-bottom:2px solid whitesmoke;
 }
 
 .brand-title {
@@ -97,6 +115,7 @@ header {
         display: flex;
         flex-direction: column;
         gap:.3rem;
+        border-top: 2px solid whitesmoke;
     }
     .navbar li {
         width: 100%;
@@ -108,3 +127,42 @@ header {
     }
 }
 
+.content{
+    max-width: 1100px;
+    display: flex;
+    margin:24px auto auto auto;
+    gap: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:white;
+    padding:16px;
+    /* border:2px solid white; */
+}
+.box {
+    flex: 1 1 500px;
+    padding: inherit;
+}
+.content .left {
+    /* border:2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap:1rem;
+    flex: 1;
+}
+.content .left h2 {
+    font-size:32px;
+    font-weight:900;
+}
+.content .right {
+    /* border:3px solid green; */
+    flex: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .right img {
+    width: clamp(240px,360px, 80vw);
+}
